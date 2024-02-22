@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply h-full bg-neutral-50 dark:bg-neutral-950 antialiased dark:text-neutral-50;
+    }
+}
+
+.btn-shine {
+    font-weight: 700;
+    background: linear-gradient(to right, #38BDAE 0, #1f635b 10%, #38BDAE 20%);
+    background-position: 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 10s infinite linear;
+    /* animation-delay: 10s; */
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
+  }
+  
+  @keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    90% {
+      background-position: 1080px;
+    }
+    100% {
+      background-position: 1080px;
+    }
+  }
